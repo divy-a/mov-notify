@@ -49,15 +49,15 @@ def find_movies(movie_name):
     return founds
 
 
-def keep_seaching(movie_name, interval):
-    while True:
-        founds = find_movies(movie_name)
-        if len(founds) > 0:
-            formatted_msg = ''
-            for found in founds:
-                formatted_msg += f'{movie_name} found @ {found}, '
-            send_message(formatted_msg[:-1])
-            break
-        else:
-            send_message(f'Still seaching for {movie_name}')
-            time.sleep(interval)
+def ms(movie_name):
+    
+    founds = find_movies(movie_name)
+    if len(founds) > 0:
+        formatted_msg = ''
+        for found in founds:
+            formatted_msg += f'{movie_name} found @ {found}, '
+        send_message(formatted_msg[:-1])
+        break
+    else:
+        send_message(f'Still seaching for {movie_name}')
+            

@@ -57,7 +57,6 @@ def ms(movie_name):
         for found in founds:
             formatted_msg += f'{movie_name} found @ {found}, '
         send_message(formatted_msg[:-1])
-        break
     else:
         send_message(f'Still seaching for {movie_name}')
             
